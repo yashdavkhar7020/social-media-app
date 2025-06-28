@@ -16,7 +16,7 @@ const routes = [
   { path: '/create', component: CreatePost }, 
   { path: '/users', component: Users }, 
   { path: '/myposts', component: MyPosts }, 
-  { path: '/profile', component: Profile }, // ✅ Add this
+  { path: '/profile', component: Profile }, 
 ];
 
 const router = createRouter({
