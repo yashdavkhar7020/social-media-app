@@ -1,7 +1,8 @@
-import axios from 'axios';
+import axios from 'axios'
 
-const api = axios.create({
-  baseURL: '/api',
-});
+const baseURL = import.meta.env.PROD
+  ? 'https://social-media-app-c4pe.onrender.com/' // ← change this to your real backend URL
+  : '/api'
 
-export default api;
+const api = axios.create({ baseURL })
+export default api
