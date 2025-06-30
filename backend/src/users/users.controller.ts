@@ -10,7 +10,7 @@ export class UsersController {
 @Post('follow/:id')
 async follow(@Request() req, @Param('id') id: string) {
   const currentUserId = req.user.userId;
-  const cleanId = id.trim(); // 🔥 this removes `\n` or spaces
+  const cleanId = id.trim(); 
   const result = await this.usersService.followUser(currentUserId, cleanId);
   return { message: result };
 }
@@ -19,7 +19,7 @@ async follow(@Request() req, @Param('id') id: string) {
 @Post('unfollow/:id')
 async unfollow(@Request() req, @Param('id') id: string) {
   const currentUserId = req.user.userId;
-  const cleanId = id.trim(); // 🔥 same here
+  const cleanId = id.trim(); 
   const result = await this.usersService.unfollowUser(currentUserId, cleanId);
   return { message: result };
 }
